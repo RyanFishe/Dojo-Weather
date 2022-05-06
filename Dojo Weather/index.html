@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="./static/script.js" defer></script>
+</head>
+<body>
+    <div id="headerbar"></div>
+    <div id="container">
+        <div id="popup">
+            <img src="./static/assets/cookie.png" alt="cookie" id="cookie">
+            <div class="popupContent">
+                <h3>Stop! Cookie time</h3>
+                <span>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic.<a href="">Read more...</a></span>
+            </div> 
+            <button onclick="hide()">I Accept</button>
+        </div>
+        <div id="header">
+            <div id="title">
+                <h1>Dojo Weather</h1>
+            </div>
+            <div class="cities">
+                <span id="burbank" onclick="alert('Loading weather report...'); cityClick(id); getCityData();">Burbank</span>
+                <span id="chicago" onclick="alert('Loading weather report...'); cityClick(id); getCityData();">Chicago</span>
+                <span id="dallas" onclick="alert('Loading weather report...'); cityClick(id); getCityData();">Dallas</span>
+            </div>
+        </div>
+        <div id="header2">
+            <div id="currentCity">
+                <h2 id="current_city">San Jose</h2>
+            </div>
+            <div id="tempView">
+                <p>show temperature in </p>
+                <select oninput ="chooseTemp(this)" id = "thistemp">
+                    <option value="F">&deg;F</option>
+                    <option value="C">&deg;C</option>
+                </select>
+            </div>   
+        </div> 
+        <hr>
+        <div class="forecast">
+            <div class="day">
+                <h3>Today</h3>
+                <img src="./static/assets/some_rain.png" alt="rain" class="weatherPics" id = "current_pic">
+                <p id="current_description">some rain</p>
+                <div class="highLow">
+                    <div class="high">
+                        <h3 id="current_max">75&deg;</h3>
+                    </div>
+                    <div class="low">
+                        <h3 id="current_min">65</h3>
+                        <!-- <span>°</span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <h3>Tomorrow</h3>
+                <img src="./static/assets/some_sun.png" alt="sun" class="weatherPics">
+                <p>some sun</p>
+                <div class="highLow">
+                    <div class="high">
+                        <h3>80</h3>
+                    </div>
+                    <div class="low">
+                        <h3>66</h3> 
+                    </div>
+                </div>
+            </div> 
+                <div class="day">
+                <h3>Friday</h3>
+                <img src="./static/assets/some_clouds.png" alt="clouds" class="weatherPics">
+                <p>some clouds</p>
+                <div class="highLow">
+                    <div class="high">
+                        <h3>69</h3>
+                    </div>
+                    <div class="low">
+                        <h3>61</h3>
+                    </div>
+                </div>
+                </div>           
+            <div class="day">
+                <h3>Saturday</h3>
+                <img src="./static/assets/some_sun.png" alt="sun" class="weatherPics">
+                <p>some sun</p>
+                <div class="highLow">
+                    <div class="high">
+                        <h3>78</h3>
+                    </div>
+                    <div class="low">
+                        <h3>70</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
